@@ -1,0 +1,29 @@
+package com.sorting;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class SortingTest {
+
+	public static void main(String[] args) {
+
+		System.err.println(bubbleSort(Arrays.<Integer>asList(7, 6, 9, 6, 2, 8)));
+	}
+
+	private static List<Integer> bubbleSort(List<Integer> unSortingList) {
+		Integer temp;
+		Integer reachesLoop = 0;
+		while (reachesLoop <= unSortingList.size()) {
+			for (int i = 0; i < unSortingList.size() - 1; i++) {
+				if (unSortingList.get(i) > unSortingList.get(i + 1)) {
+					temp = unSortingList.get(i + 1);
+					unSortingList.set(i + 1, unSortingList.get(i));
+					unSortingList.set(i, temp);
+				}
+			}
+			reachesLoop++;
+		}
+		return unSortingList;
+	}
+
+}
