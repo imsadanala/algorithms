@@ -12,18 +12,19 @@ public class SortingTest {
 
 	public static void main(String[] args) {
 
-		System.err.println(bubbleSort(Arrays.<Integer>asList(7, 6, 9, 6, 2, 8)));
+		System.err.println(selectionSort(Arrays.<Integer>asList(7, 6, 9, 1, 2, 8)));
 	}
 
 	/**
 	 * will sort the elements using Bubble sort technique
+	 * 
 	 * @param sortingList
-	 * @return
+	 * @return Time Complexity is Big O of n square
 	 */
 	private static List<Integer> bubbleSort(List<Integer> sortingList) {
 		Integer temp;
-		Integer reachesLoop = 0;
-		while (reachesLoop <= sortingList.size()) {
+		Integer pointer = 0;
+		while (pointer <= sortingList.size()) {
 			for (int i = 0; i < sortingList.size() - 1; i++) {
 				if (sortingList.get(i) > sortingList.get(i + 1)) {
 					temp = sortingList.get(i + 1);
@@ -31,7 +32,30 @@ public class SortingTest {
 					sortingList.set(i, temp);
 				}
 			}
-			reachesLoop++;
+			pointer++;
+		}
+		return sortingList;
+	}
+
+	/**
+	 * will sort the elements using Insertion sort technique
+	 * 
+	 * @param sortingList
+	 * @return Time Complexity is Big O of n square
+	 */
+	private static List<Integer> selectionSort(List<Integer> sortingList) {
+		Integer minValIndex = 0;
+		Integer temp = 0;
+		for (int i = 0; i < sortingList.size(); i++) {
+			minValIndex = i;
+			for (int j = i + 1; j < sortingList.size(); j++) {
+				if (sortingList.get(j) < sortingList.get(minValIndex)) {
+					minValIndex = j;
+				}
+			}
+			temp = sortingList.get(minValIndex);
+			sortingList.set(minValIndex, sortingList.get(i));
+			sortingList.set(i, temp);
 		}
 		return sortingList;
 	}

@@ -1,0 +1,66 @@
+package com.sorting;
+
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * 
+ * @author Suresh Sadanala
+ *
+ */
+public class SortingTest {
+
+	public static void main(String[] args) {
+
+		System.err.println(selectionSort(Arrays.<Integer>asList(7, 6, 9, 6, 2, 8)));
+	}
+
+	/**
+	 * will sort the elements using Bubble sort technique
+	 * 
+	 * @param sortingList
+	 * @return Time Complexity is Big O of n square
+	 */
+	private static List<Integer> bubbleSort(List<Integer> sortingList) {
+		Integer temp;
+		Integer pointer = 0;
+		while (pointer <= sortingList.size()) {
+			for (int i = 0; i < sortingList.size() - 1; i++) {
+				if (sortingList.get(i) > sortingList.get(i + 1)) {
+					temp = sortingList.get(i + 1);
+					sortingList.set(i + 1, sortingList.get(i));
+					sortingList.set(i, temp);
+				}
+			}
+			pointer++;
+		}
+		return sortingList;
+	}
+
+	/**
+	 * will sort the elements using Insertion sort technique
+	 * 
+	 * @param sortingList
+	 * @return Time Complexity is Big O of n square
+	 */
+	private static List<Integer> selectionSort(List<Integer> sortingList) {
+		Integer minElement = 0;
+		Integer minElementIndex = 0;
+		Integer pointer = 0;
+		Integer temp = 0;
+		while(pointer <= sortingList.size()) {
+			for (int i = 0; i < sortingList.size() - 1; i++) {
+				if (sortingList.get(i) < sortingList.get(i + 1)) {
+					minElement = sortingList.get(i);
+					minElementIndex =i;
+				}
+			}
+			temp = sortingList.get(pointer);
+			sortingList.set(pointer, minElement);
+			sortingList.set(minElementIndex, temp);
+			pointer++;
+		}
+		return sortingList;
+	}
+
+}
