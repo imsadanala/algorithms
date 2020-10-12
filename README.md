@@ -12,20 +12,16 @@ SORTING ALGORITMS
   
   1. UnOrdered List
   
-    a. Best case, knowing the index of the element that you then it is O(1)
-    
+    a. Best case, knowing the index of the element that you then it is O(1)    
     b. Worst case, O(n)
   
-  2. Ordered List
-    
+  2. Ordered List    
     a. O(log^n base2)
     
  B. Insertion/Deletion
  
-  1. Ordered list
-  
-    a. Worst case, O(n)
-    
+  1. Ordered list  
+    a. Worst case, O(n)    
     b. Best case, O(1)
  
   
