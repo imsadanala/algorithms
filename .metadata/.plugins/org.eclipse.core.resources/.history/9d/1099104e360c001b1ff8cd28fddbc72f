@@ -38,7 +38,7 @@ public class SortingTest {
 	}
 
 	/**
-	 * will sort the elements using Selection sort technique
+	 * will sort the elements using Insertion sort technique
 	 * 
 	 * @param sortingList
 	 * @return Time Complexity is Big O of n square

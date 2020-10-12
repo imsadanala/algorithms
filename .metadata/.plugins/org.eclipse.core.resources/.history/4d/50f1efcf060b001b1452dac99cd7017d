@@ -1,9 +1,0 @@
-package com.sorting;
-
-public class SortingTest {
-
-	public static void main(String[] args) {
-
-	}
-
-}
