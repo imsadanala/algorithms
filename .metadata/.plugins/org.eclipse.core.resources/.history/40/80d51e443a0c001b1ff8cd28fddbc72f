@@ -12,14 +12,14 @@ public class SortingTest {
 
 	public static void main(String[] args) {
 
-		System.err.println(insertionSort(Arrays.<Integer>asList(7, 6, 9, 1, 2, 8)));
+		System.err.println(selectionSort(Arrays.<Integer>asList(7, 6, 9, 1, 2, 8)));
 	}
 
 	/**
-	 * will sort the elements using Bubble sort technique Time Complexity is O(n^2)
+	 * will sort the elements using Bubble sort technique
 	 * 
 	 * @param sortingList
-	 * @return
+	 * @return Time Complexity is Big O of n square
 	 */
 	private static List<Integer> bubbleSort(List<Integer> sortingList) {
 		Integer temp;
@@ -38,11 +38,10 @@ public class SortingTest {
 	}
 
 	/**
-	 * will sort the elements using Selection sort technique Time Complexity is
-	 * O(n^2)
+	 * will sort the elements using Selection sort technique
 	 * 
 	 * @param sortingList
-	 * @return
+	 * @return Time Complexity is Big O of n square
 	 */
 	private static List<Integer> selectionSort(List<Integer> sortingList) {
 		Integer minValIndex = 0;
@@ -61,24 +60,10 @@ public class SortingTest {
 		return sortingList;
 	}
 
-	/**
-	 * will sort the elements using Selection sort technique Time Complexity is
-	 * O(n^2)
-	 * 
-	 * @param sortingList
-	 * @return
-	 */
 	private static List<Integer> insertionSort(List<Integer> sortingList) {
-		Integer key, j, temp = 0;
-		for (int i = 1; i < sortingList.size(); i++) {
-			key = sortingList.get(i);
-			j = i - 1;
-			while (j >= 0 && key < sortingList.get(j)) {
-				temp = sortingList.get(j);
-				sortingList.set(j, sortingList.get(j + 1));
-				sortingList.set(j + 1, temp);
-				j--;
-			}
+		for (int i = 0; i < sortingList.size(); i++) {
+			
+			
 		}
 		return sortingList;
 	}
