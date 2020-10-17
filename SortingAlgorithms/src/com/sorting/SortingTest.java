@@ -13,6 +13,7 @@ public class SortingTest {
 	public static void main(String[] args) {
 
 		System.err.println(insertionSort(Arrays.<Integer>asList(7, 6, 9, 1, 2, 8)));
+		System.out.println("strawberries".substring(2, 5));
 	}
 
 	/**
@@ -62,7 +63,7 @@ public class SortingTest {
 	}
 
 	/**
-	 * will sort the elements using Selection sort technique Time Complexity is
+	 * will sort the elements using insertion sort technique Time Complexity is
 	 * O(n^2)
 	 * 
 	 * @param sortingList
@@ -78,8 +79,13 @@ public class SortingTest {
 				sortingList.set(j, sortingList.get(j + 1));
 				sortingList.set(j + 1, temp);
 				j--;
+				if("".getClass().getSimpleName() == "") {}
 			}
 		}
 		return sortingList;
 	}
+}
+
+class G extends SortingTest {
+		
 }
