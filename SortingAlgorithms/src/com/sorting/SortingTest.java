@@ -12,20 +12,19 @@ public class SortingTest {
 
 	public static void main(String[] args) {
 
-		System.err.println(insertionSort(Arrays.<Integer>asList(7, 6, 9, 1, 2, 8)));
-		System.out.println("strawberries".substring(2, 5));
+		System.err.println(bubbleSort(Arrays.<Integer>asList(10,30, 67, 12, 32, 68, 12, 24, 9)));
 	}
 
 	/**
 	 * will sort the elements using Bubble sort technique Time Complexity is O(n^2)
-	 * 
+	 * push max/min element to end of the list based on your sorting type
 	 * @param sortingList
 	 * @return
 	 */
 	private static List<Integer> bubbleSort(List<Integer> sortingList) {
 		Integer temp;
 		Integer pointer = 0;
-		while (pointer <= sortingList.size()) {
+		while (pointer < sortingList.size()) {
 			for (int i = 0; i < sortingList.size() - 1; i++) {
 				if (sortingList.get(i) > sortingList.get(i + 1)) {
 					temp = sortingList.get(i + 1);
@@ -79,13 +78,10 @@ public class SortingTest {
 				sortingList.set(j, sortingList.get(j + 1));
 				sortingList.set(j + 1, temp);
 				j--;
-				if("".getClass().getSimpleName() == "") {}
+				if ("".getClass().getSimpleName() == "") {
+				}
 			}
 		}
 		return sortingList;
 	}
-}
-
-class G extends SortingTest {
-		
 }
