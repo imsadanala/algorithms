@@ -8,6 +8,7 @@ import java.util.List;
  * @author Suresh Sadanala
  *
  */
+@SuppressWarnings("unused")
 public class SortingTest {
 
 	public static void main(String[] args) {
@@ -40,7 +41,7 @@ public class SortingTest {
 	/**
 	 * will sort the elements using Selection sort technique Time Complexity is
 	 * O(n^2)
-	 * 
+	 * min element will be pushed to start of the array, if sorting type is ASC 
 	 * @param sortingList
 	 * @return
 	 */
