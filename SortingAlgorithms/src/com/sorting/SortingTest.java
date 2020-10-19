@@ -1,3 +1,4 @@
+
 package com.sorting;
 
 import java.util.Arrays;
@@ -13,12 +14,14 @@ public class SortingTest {
 
 	public static void main(String[] args) {
 
-		System.err.println(bubbleSort(Arrays.<Integer>asList(10,30, 67, 12, 32, 68, 12, 24, 9)));
+		System.err.println(insertionSort(Arrays.<Integer>asList(10, 30, 67, 12, 32, 68, 12, 24, 9)));
 	}
 
 	/**
-	 * will sort the elements using Bubble sort technique Time Complexity is O(n^2)
+	 * will sort the elements using Bubble sort technique 
+	 * Time Complexity is O(n^2)
 	 * push max/min element to end of the list based on your sorting type
+	 * 
 	 * @param sortingList
 	 * @return
 	 */
@@ -39,9 +42,10 @@ public class SortingTest {
 	}
 
 	/**
-	 * will sort the elements using Selection sort technique Time Complexity is
-	 * O(n^2)
-	 * min element will be pushed to start of the array, if sorting type is ASC 
+	 * will sort the elements using Selection sort technique 
+	 * Time Complexity is O(n^2) 
+	 * min element will be pushed to start of the array, if sorting type is ASC
+	 * 
 	 * @param sortingList
 	 * @return
 	 */
@@ -63,8 +67,8 @@ public class SortingTest {
 	}
 
 	/**
-	 * will sort the elements using insertion sort technique Time Complexity is
-	 * O(n^2)
+	 * will sort the elements using insertion sort technique 
+	 * Time Complexity is O(n^2)
 	 * 
 	 * @param sortingList
 	 * @return
@@ -79,10 +83,10 @@ public class SortingTest {
 				sortingList.set(j, sortingList.get(j + 1));
 				sortingList.set(j + 1, temp);
 				j--;
-				if ("".getClass().getSimpleName() == "") {
-				}
 			}
 		}
 		return sortingList;
 	}
+	
+	
 }
