@@ -9,7 +9,6 @@ import java.util.List;
  * @author Suresh Sadanala
  *
  */
-@SuppressWarnings("unused")
 public class BubbleSort {
 
 	public static void main(String[] args) {
