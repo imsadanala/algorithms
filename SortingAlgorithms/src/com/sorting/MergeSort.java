@@ -23,8 +23,9 @@ public class MergeSort {
 	 * @param high
 	 */
 	private static void sort(int low, int high) {
+		int mid;
 		if (low < high) {
-			int mid = (low + high) / 2;
+			mid = (low + high) / 2;
 			sort(low, mid);
 			sort(mid + 1, high);
 			merge(low, mid, high);
@@ -34,31 +35,30 @@ public class MergeSort {
 	/**
 	 * merge to form sorted array
 	 * 
-	 * @param start
+	 * @param low
 	 * @param mid
-	 * @param end
+	 * @param high
 	 */
-	private static void merge(int start, int mid, int end) {
+	private static void merge(int low, int mid, int high) {
 
-		int temp[] = new int[end-start+1];
+		int temp[] = new int[high - low + 1];
 
 		// crawlers for both intervals and for temp
-		int i = start, j = mid + 1, k = 0;
+		int i = low, j = mid + 1, k = 0;
 
 		/**
 		 * traverse both left and right arrays and in each iteration add smaller of both
 		 * elements in temp
 		 */
-		while (i <= mid && j <= end) {
+		while (i <= mid && j <= high) {
 			if (array[i] <= array[j]) {
 				temp[k] = array[i];
-				k += 1;
-				i += 1;
+				i++;
 			} else {
 				temp[k] = array[j];
-				k += 1;
-				j += 1;
+				j++;
 			}
+			k++;
 		}
 
 		// copy left over elements from left array to temp array
@@ -69,15 +69,16 @@ public class MergeSort {
 		}
 
 		// copy left over elements from right array to temp array
-		while (j <= end) {
+		while (j <= high) {
 			temp[k] = array[j];
 			k += 1;
 			j += 1;
 		}
 
 		// copy temp to original array
-		for (i = start; i <= end; i += 1) {
-			array[i] = temp[i-start];
+		for (i = 0; i < temp.length; i += 1) {
+			array[low] = temp[i];
+			low++;
 		}
 	}
 }
