@@ -16,7 +16,7 @@ this repo will have basic sorting algorithms and data structures code
     
     n	                  Linear	            Finding an element in UnSorted Array
     
-    nlog^n	            Linear Logarithmic  Sorting items by "Divide and Conquer"- Merge Sort
+    nlog^n	            LinearLogarithmic   Sorting items by "Divide and Conquer"- Merge Sort
     
     n^2	                Quadratic	          Shortest path between two nodes in a graph
     
