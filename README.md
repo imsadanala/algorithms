@@ -7,6 +7,23 @@ this repo will have basic sorting algorithms and data structures code
   3. Insertion Sort - Whenever we move element, make sure left side of the elements should be sorted and also time complexity is O(n) when you have most of the elements are sorted- O(n^2)
 
 # Time Complexity
+
+ TimeComplexity	              Name	                      Example 
+ 
+    1	                  Constant	          Insertion/Deletion from LinkedList
+    
+    log^n	              Logarithmic	        Finding an element in Sorted Array
+    
+    n	                  Linear	            Finding an element in UnSorted Array
+    
+    nlog^n	            Linear Logarithmic  Sorting items by "Divide and Conquer"- Merge Sort
+    
+    n^2	                Quadratic	          Shortest path between two nodes in a graph
+    
+    n^3	                Cubic	              Matrix Multiplication
+    
+    2^n	                Exponential	        The Tower of Hanoi problem
+
  
  A. Search  
   1. UnOrdered List  
